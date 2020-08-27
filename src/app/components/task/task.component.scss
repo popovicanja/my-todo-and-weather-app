@@ -1,0 +1,40 @@
+input[type=checkbox] {
+  cursor: pointer;
+}
+
+input[type=checkbox]:after {
+  content: " ";
+  background-color: #D7B1D7;
+  display: inline-block;
+  visibility: visible;
+  border-radius: 50%;
+}
+
+input[type=checkbox]:checked:after {
+  content: "\2714";
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+  bottom: 6px;
+  right: 4px;
+}
+
+.task--crossed::after {
+  border-bottom: 1px solid rgba(24, 1, 24, 0.6);
+  content: "";
+  margin-top: -14px;
+  position: absolute;
+  right: 8px;
+  left: 8px;
+  top: 50%;
+}
+
+.task-description {
+  color: dimgray;
+  font-size: 12px;
+  letter-spacing: .3px;
+}

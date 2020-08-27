@@ -1,0 +1,28 @@
+<div class="color-picker">
+  <div class="form-group">
+    <label for="colorPicker" class="category-input-label">Category Color*</label>
+    <div class="row m-0 align-items-center">
+      <div class="circle mr-3" [ngStyle]="{'background': color}" (click)="toggleColors()"></div>
+      <input type="text"
+             class="form-control col-6"
+             id="colorPicker"
+             maxlength="7"
+             placeholder="#FFFFFF"
+             [value]="color"
+             (keyup)="changeColorManual(paintInput.value)"
+             (keydown.enter)="toggleColors()"
+             #paintInput>
+    </div>
+  </div>
+
+  <div *ngIf="show" class="palette p-2">
+    <div class="colors">
+      <div *ngFor="let paint of defaultColors"
+           (click)="changeColor(paint)"
+           class="row m-0 justify-content-center">
+        <span class="circle"
+              [ngStyle]="{'background': paint}"></span>
+      </div>
+    </div>
+  </div>
+</div>

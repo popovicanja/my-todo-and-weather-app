@@ -1,0 +1,12 @@
+<div class="row m-0 justify-content-between align-items-center">
+  <div class="form-group col-4 p-0">
+    <label for="categoryName" class="category-input-label">Category name*</label>
+    <input type="text" [(ngModel)]="categoryName" class="form-control" id="categoryName" placeholder="Enter name">
+  </div>
+
+  <app-color-picker class="col-6"
+                    [color]="backgroundColor"
+                    (colorChanged)="setColor($event)"></app-color-picker>
+
+  <span class="add-category" (click)="addNewCategory()">Add</span>
+</div>

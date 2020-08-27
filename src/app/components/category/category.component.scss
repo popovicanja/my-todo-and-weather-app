@@ -1,0 +1,22 @@
+.category {
+  cursor: pointer;
+  border-radius: 16px;
+  font-size: 13px;
+  //font-weight: 400;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  opacity: 0.4;
+  background: gray;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.category--active {
+  opacity: 1;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+

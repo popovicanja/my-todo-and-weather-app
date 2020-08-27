@@ -1,0 +1,4 @@
+<span class="badge badge-primary category"
+      [ngStyle]="!outline ? {'background': color, 'color': '#FFFFFF'} : {'background': '#FFFFFF', 'color': color, 'border': ('1px solid ' + color)}"
+      [ngClass]="{'category--active': isActive}"
+      (click)="onSelected.emit(id)">{{title}}</span>

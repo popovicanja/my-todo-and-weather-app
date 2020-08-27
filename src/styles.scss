@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+* {
+  font-family: Roboto, 'sans-serif';
+}
+
+html, body {
+  height: 100%;
+}
+
+.category-input-label {
+  font-size: 12px;
+  letter-spacing: .4px;
+}

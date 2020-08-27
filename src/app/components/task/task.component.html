@@ -1,0 +1,11 @@
+<div class="card task" [ngClass]="{'task--crossed': isChecked.value}">
+  <div class="card-body py-2 p3-x">
+    <div class="form-check">
+      <input [formControl]="isChecked" type="checkbox" class="form-check-input checkbox--custom" [id]="'checkBoxLabel' + task.id">
+      <label class="form-check-label checkbox-label--custom" [for]="'checkBoxLabel' + task.id">
+        <div>{{task.title}}</div>
+        <div class="mt-2 task-description" *ngIf="task.description">{{task.description}}</div>
+      </label>
+    </div>
+  </div>
+</div>

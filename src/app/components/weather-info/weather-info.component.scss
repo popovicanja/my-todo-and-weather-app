@@ -1,0 +1,29 @@
+.weather {
+  display: grid;
+  justify-content: end;
+}
+
+.location {
+  font-size: 20px;
+}
+
+.weather-img {
+  width: 30%;
+}
+.temperature {
+  font-size: 32px;
+}
+
+.date-and-time {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.icon--size {
+  width: 24px;
+}
+
+.metric-value {
+  font-size: 12px;
+  letter-spacing: .7px;
+}

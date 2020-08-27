@@ -1,0 +1,48 @@
+.color-picker {
+  position: relative;
+  .circle {
+    height: 24px;
+    width: 24px;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 1px solid #dadada;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+  }
+
+  .palette {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 100;
+    &:after {
+      border: 10px solid transparent;
+      border-bottom: 10px solid #fff;
+      content: '';
+      left: 10px;
+      position: absolute;
+      top: -20px;
+    }
+
+    .colors {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: .5rem;
+      grid-auto-rows: auto;
+      grid-row-gap: 1rem;
+
+      .circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+    }
+
+    .hex-input-label {
+      font-size: 12px;
+      letter-spacing: .3px;
+    }
+  }
+}

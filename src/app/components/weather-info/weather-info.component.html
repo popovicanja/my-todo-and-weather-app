@@ -1,0 +1,27 @@
+<div *ngIf="weather" class="weather">
+  <div class="location text-right">{{weather.city}}, {{country}}</div>
+
+  <div class="row m-0 align-items-center justify-content-end">
+    <img class="weather-img" [src]="weather.getIconUrl()" alt="weather-icon">
+    <div [innerHTML]="weather.temp | temperature: 'C'" class="temperature"></div>
+  </div>
+
+  <div class="date-and-time text-right">
+    <span>{{today | weekDay}}</span>
+    <span class="mx-2">|</span>
+    <span>{{today | date: 'dd MMM'}}</span>
+    <span class="mx-2">|</span>
+    <span>{{today | date: 'HH:mm'}}</span>
+  </div>
+
+  <div class="addition-weather-info row m-0 justify-content-end mt-3">
+    <div class="row m-0 align-items-center mr-3">
+      <span class="mr-1">{{weather.humidity}} <span class="metric-value">%</span></span>
+      <img src="assets/icons/humidity.svg" alt="humidity-icon" class="icon--size">
+    </div>
+    <div class="row m-0 align-items-center">
+      <span class="mr-1">{{weather.windSpeed}} <span class="metric-value">m/s</span></span>
+      <img src="assets/icons/wind.svg" alt="wind-icon" class="icon--size">
+    </div>
+  </div>
+</div>

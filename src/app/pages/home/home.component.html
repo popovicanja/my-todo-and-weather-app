@@ -1,0 +1,40 @@
+<div class="container col-12 col-lg-8 col-xl-5 mt-0 mt-lg-3 container--full-height container--shadow">
+  <div class="header py-5 px-4 row justify-content-between">
+    <div class="title col-5 col-md-4">
+      Todo & weather app
+    </div>
+    <app-weather-info class="col-6" [weather]="weatherData" [country]="country"></app-weather-info>
+  </div>
+
+  <div class="content py-3">
+    <div class="subtitle"></div>
+
+    <div class="categories row m-0 mb-2">
+      <app-category *ngFor="let category of categories"
+                    [title]="category.title"
+                    [id]="category.id"
+                    [color]="category.color"
+                    [isActive]="category.id === selectedCategoryId"
+                    (onSelected)="onCategorySelected($event)">
+      </app-category>
+    </div>
+
+    <div class="w-100 text-right mb-3">
+      <span class="add-new-task" data-toggle="modal" data-target="#exampleModal">Add new task</span>
+    </div>
+
+    <div class="tasks">
+      <app-task *ngFor="let task of filteredTasks"
+                [task]="task"
+                (checked)="onTaskChecked($event)"></app-task>
+      <div *ngIf="!tasks || filteredTasks.length === 0"
+           class="tasks-empty w-100 text-center py-5">
+        No tasks
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<app-task-form (addTask)="onTaskAdded()"></app-task-form>
