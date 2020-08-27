@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit {
 
     setTimeout(() => {
       this.fetchTasks();
-    }, 40000000);
+    }, 350);
   }
 
   populateLSWithData(): void {

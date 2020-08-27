@@ -9,7 +9,7 @@ import {Weather} from '../models/weather.model';
 })
 export class WeatherService {
 
-  weatherApiKey = '7efa2d6f51801611e2430213f0e5d8b8';
+  private readonly weatherApiKey = '7efa2d6f51801611e2430213f0e5d8b8';
 
   constructor(private http: HttpClient) {
   }
